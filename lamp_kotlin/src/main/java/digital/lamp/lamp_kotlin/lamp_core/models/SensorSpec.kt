@@ -25,7 +25,6 @@ import java.io.Serializable
  * @param settingsSchema The data definition of a SensorSpec.
  */
 @Parcelize
-
 data class SensorSpec (
     /* The name of the sensor. */
     @Json(name = "data")
