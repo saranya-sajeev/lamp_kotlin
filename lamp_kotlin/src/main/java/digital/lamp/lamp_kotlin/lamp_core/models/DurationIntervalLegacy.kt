@@ -9,7 +9,7 @@
 * https://openapi-generator.tech
 * Do not edit the class manually.
 */
-package digital.lamp.lamp_core.models
+package digital.lamp.lamp_kotlin.lamp_core.models
 
 
 
@@ -26,14 +26,13 @@ import java.io.Serializable
  * @param customTimes 
  */
 @Parcelize
-
 data class DurationIntervalLegacy (
-    @Json(name = "repeat_type")
+    @Json(name = "repeat_interval")
     var repeatType: kotlin.String? = null,
-    @Json(name = "date")
+    @Json(name = "time")
     var date: java.sql.Timestamp? = null,
     @Json(name = "custom_times")
-    var customTimes: @RawValue kotlin.Array<kotlin.Any>? = null
+    var customTimes: @RawValue Array<Any>? = null
 ) : Serializable, Parcelable {
 	companion object {
 		private const val serialVersionUID: Long = 123
