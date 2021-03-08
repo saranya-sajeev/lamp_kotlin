@@ -36,6 +36,9 @@ class ActivityAPI(basePath: kotlin.String = defaultBasePath) : ApiClient(basePat
     fun activityAll(participantId: String,basic: String) : Any {
         val localVariableBody: kotlin.Any? = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, List<kotlin.String>>()
+            .apply {
+                    put("ignore_binary", listOf("true"))
+            }
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
 
         localVariableHeaders.apply {

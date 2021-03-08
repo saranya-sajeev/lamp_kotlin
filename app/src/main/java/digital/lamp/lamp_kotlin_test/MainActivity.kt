@@ -23,14 +23,14 @@ class MainActivity : AppCompatActivity() {
     private fun invokeSensorSpecData(){
 
             val basic = "Basic ${Utils.toBase64(
-                    "U7832470994@lamp.com:U7832470994")}"
+                    "U3039047323@lamp.com:U3039047323")}"
 
             Thread {
                 // Do network action in this function
-                val activityString = ActivityAPI("https://api-staging.lamp.digital/").activityAll("U7832470994",basic)
+                val activityString = ActivityAPI("https://lampv2.zcodemo.com:9093/").activityAll("U3039047323",basic)
                 val activityResponse = Gson().fromJson(activityString.toString(), ActivityResponse::class.java)
 
-                Log.e("KOK", " Lamp Core Response -  ${activityResponse.data[0].schedule?.size}")
+                Log.e("KOK", " Lamp Core Response -  ${activityResponse.data[0].schedule?.get(0)?.notification_ids?.size.toString()}")
             }.start()
 
     }
