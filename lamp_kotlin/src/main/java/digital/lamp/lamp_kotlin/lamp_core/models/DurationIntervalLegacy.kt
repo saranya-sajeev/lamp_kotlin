@@ -28,11 +28,15 @@ import java.io.Serializable
 @Parcelize
 data class DurationIntervalLegacy (
     @Json(name = "repeat_interval")
-    var repeatType: kotlin.String? = null,
+    var repeat_interval: kotlin.String? = null,
+    @Json(name = "start_date")
+    var start_date: java.sql.Timestamp? = null,
     @Json(name = "time")
-    var date: java.sql.Timestamp? = null,
-    @Json(name = "custom_times")
-    var customTimes: @RawValue Array<Any>? = null
+    var time: java.sql.Timestamp? = null,
+    @Json(name = "customTimes")
+    var custom_time: @RawValue ArrayList<Any>? = null,
+    @Json(name = "notificationIds")
+    var notification_ids: @RawValue ArrayList<Any>? = null
 ) : Serializable, Parcelable {
 	companion object {
 		private const val serialVersionUID: Long = 123
