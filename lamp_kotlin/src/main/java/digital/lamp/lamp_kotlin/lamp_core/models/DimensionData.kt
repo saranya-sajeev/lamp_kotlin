@@ -22,8 +22,8 @@ data class DimensionData(
         val ssid: String?,
         val rssi: Int?,
         val steps: Int?,
-        val bp_systolic: Float?,
-        val bp_diastolic: Float?,
+        val systolic: BloodPressureData?,
+        val diastolic: BloodPressureData?,
         val unit: String?,
         val value: Any?,
         val type: Any?,
@@ -80,3 +80,9 @@ data class ActivityData(
 ) {
     constructor() : this(null,null,null,null,null,null,null)
 }
+
+data class BloodPressureData(
+    val value: Float,
+    val units: String?,
+    val source: String?
+)
