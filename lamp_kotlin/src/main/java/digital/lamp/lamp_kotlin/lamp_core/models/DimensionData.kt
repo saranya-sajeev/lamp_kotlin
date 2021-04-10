@@ -81,6 +81,7 @@ data class ActivityData(
     constructor() : this(null,null,null,null,null,null,null)
 }
 
+
 data class BloodPressureData(
     val value: Float,
     val units: String?,
